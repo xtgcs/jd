@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link href="../css/jd.css" rel="stylesheet">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="ajax_submit.js"></script>
+    <script src="../js/jd.js"></script>
+</head>
+<body>
+
+<div id="top">
+    <div id="top_bar">
+        <img src="../images/star.jpg"/>
+        <a href="javascript:void(0)">收藏京东</a>
+        <ul class="rt">
+            <li>
+                你好，欢迎来到京东！
+                <a href="#">[登录]</a>
+                <a href="#">[免费注册]</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="#">我的订单</a>
+            </li>
+            <li id="vip">
+                <b></b>
+                <a href="#">
+                    会员俱乐部</a>
+            </li>
+            <li id='dakehu'>
+                <b></b>
+                <a href="#">企业频道</a>
+            </li>
+            <li id="app_jd">
+                <b></b>
+            <span>
+            <a href="#" onmousemove="showAndHide('aj_dropdown','block')"  onmouseout="showAndHide('aj_dropdown','none')">手机京东</a>
+            </span>
+                <div id="aj_dropdown" class="top_bar_dropdown">
+                    <div>
+                        京东客户端
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        网银钱包客户端
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </li>
+            <li id="customer_service">
+                <b></b>
+                <a href="#" onmousemove="showAndHide('hiddenDiv','block')"  onmouseout="showAndHide('hiddenDiv','none')">客户服务</a>
+                <div id="hiddenDiv" class="top_bar_dropdown">
+                    <ul>
+                        <li><a href="#">帮助中心</a> </li>
+                        <li><a href="#">售后服务</a> </li>
+                        <li><a href="#">在线客服</a> </li>
+                        <li><a href="#">投诉中心</a> </li>
+                        <li><a href="#">客户邮箱</a> </li>
+                    </ul>
+                </div>
+            </li>
+            <li id="site_map">
+                <b></b>
+                <a href="#" onmousemove="showAndHide('sm_dropdown','block')" onmouseout="showAndHide('sm_dropdown','none')">网站导航</a>
+                <div id="sm_dropdown" class="top_bar_dropdown">
+                    <h3>特色栏目</h3>
+                    <ul>
+                        <li><a href="#">京东通信</a> </li>
+                        <li><a href="#">校园之星</a> </li>
+                        <li><a href="#">视频购物</a> </li>
+                        <li><a href="#">京东社区</a> </li>
+                        <li><a href="#">在线读书</a> </li>
+                        <li><a href="#">装机大师</a> </li>
+                        <li><a href="#">京东E卡</a> </li>
+                        <li><a href="#">家装城</a> </li>
+                        <li><a href="#">搭配购</a> </li>
+                        <li><a href="#">我喜欢</a> </li>
+                        <li><a href="#">游戏社区</a> </li>
+                    </ul>
+                    <div class="clr"></div>
+                    <h3>企业服务</h3>
+                    <ul>
+                        <li><a href="#">企业采购</a> </li>
+                        <li><a href="#">办公直通车</a> </li>
+                    </ul>
+                    <div class="clr"></div>
+                    <h3>旗下网站</h3>
+                    <ul>
+                        <li><a href="#">English Site</a> </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="w" id="logo">
+    <ul><li><a href="http://www.jd.com/"><img src="../images/logo-2013.png" alt="京东商城" width="170"
+                                           height="60"/></a></li><li> <span>欢迎注册</span></li>
+    </ul>
+</div>
+<div id="container">
+<form>
+    <table>
+        <tr>
+        <td><b>*</b>&nbsp;&nbsp;用户名</td>
+        <td>
+            <input id="txtLoginName" type = "text" placeholder="请输入用户名" required="required"/>
+        </td>
+        <td>
+            <div id="txtLoginNameTip">*</div>
+        </td>
+    </tr>
+        <tr>
+            <td><b>*</b>&nbsp;设置密码</td>
+            <td>
+                <input id="txtLoginPwd" type = "password" placeholder="请输入密码" required="required"/>
+            </td>
+            <td>
+                <div id="txtLoginPwdTip">*</div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>*</b>&nbsp;确认密码</td>
+            <td>
+                <input id="txtLoginPwd2"/>
+            </td>
+            <td>
+                <div id="txtLoginPwd2Tip">*</div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>*</b>&nbsp;验证手机</td>
+            <td>
+                <input id="txtNumber"/>
+            </td>
+            <td>
+                <div id="txtNumberTip">*</div>
+            </td>
+        </tr>
+    </table>
+    <ul id="message">
+        <li><b>*</b>短信验证码</li>
+        <li>
+            <input id="txtMessage"/>
+        </li>
+        <li>
+            <div id="txtMessageTip"><a href="#">获取短信验证码</a></div>
+        </li>
+    </ul>
+    <ul class="clr" id="yz">
+        <li><b>*</b>&nbsp;&nbsp;验证码</li>
+        <li>
+            <input id="txtCode"/>
+        </li>
+        <li id="txtCodeTip">AB6U</li>
+        <li id="kbq">看不清?</li>
+        <li id="hyz"><a href="#">换一张</a></li>
+    </ul>
+    <div class="lt clr" style="margin-left:90px"><input type="checkbox"/></div>
+    <span class="lt ">我已阅读并同意</span>
+    <span class="lt "><a href="#" style="color:rgb(0,90,160)">《京东用户注册协议》</a></span>
+    <div class="clr ze"><input  type="button" value="立即注册"> </div>
+</form>
+
+</div>
+</body>
+</html>
